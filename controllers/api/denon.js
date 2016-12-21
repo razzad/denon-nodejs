@@ -10,13 +10,14 @@ router.post('/', function (req, res) {
   var credentials = auth(req);
   var authorized =false;
   
-  if (!credentials || credentials.name !== ( process.env.username ||'robert') || credentials.pass !== ( process.env.PW ||'secret')) {
+ // console.log(credentials.name+ ' '+ credentials.pass+ ' '+ process.env.username ) ;
+  if (!credentials || (credentials.name !== ( process.env.username ||'Robert')) || (credentials.pass !== ( process.env.PW ||'secret'))) {
     authorized =false;
   } else {
     authorized =true;
   }
-
-
+  //console.log(authorized);
+  
   if (!authorized){
     res.header('WWW-Authenticate','Basic realm="JenB0b"');
     return res.status(401).send();

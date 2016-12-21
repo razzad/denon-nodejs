@@ -12,7 +12,7 @@ describe('/api/denon', function () {
 
     var commandSent = 'volume';
     var parameterSent = 60;
-    var username = 'robert';
+    var username = 'Robert';
     var password ='secret';
     var wrongPassword='wrongsecret';
     var auth = 'Basic ' + new Buffer(username + ':' + password).toString('base64');
