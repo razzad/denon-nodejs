@@ -5,7 +5,7 @@ var env = process.env.NODE_ENV;
 
 if (env =='PROD'){
   var leStore = require('le-store-certbot').create({
-    configDir: '/etc/letsencrypt/',          // or /etc/letsencrypt or wherever
+    configDir: '/etc/letsencrypt',          // or /etc/letsencrypt or wherever
     privkeyPath: ':configDir/live/:hostname/privkey.pem',          //
     fullchainPath: ':configDir/live/:hostname/fullchain.pem',      // Note: both that :configDir and :hostname
     certPath: ':configDir/live/:hostname/cert.pem',                //       will be templated as expected by
