@@ -10,9 +10,9 @@ if (env =='PROD'){
     fullchainPath: ':configDir/live/:hostname/fullchain.pem',      // Note: both that :configDir and :hostname
     certPath: ':configDir/live/:hostname/cert.pem',                //       will be templated as expected by
     chainPath: ':configDir/live/:hostname/chain.pem',              //       node-letsencrypt
-    workDir: '~/letsencrypt/var/lib',
-    logsDir: '~/letsencrypt/var/log',
-    webrootPath: '~/letsencrypt/srv/www/:hostname/.well-known/acme-challenge',
+    workDir: '/etc/letsencrypt/var/lib',
+    logsDir: '/etc/letsencrypt/var/log',
+    webrootPath: '/etc/letsencrypt/srv/www/:hostname/.well-known/acme-challenge',
     debug: false
   });
 
