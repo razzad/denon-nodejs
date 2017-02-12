@@ -3,17 +3,33 @@
   "properties": {
     "command": {
       "type": "string",
-      "enum": ["volume"]
+      "enum": ["volume", "power"]
     },
     "parameter": {
-      "type": "number",
-  "minimum": 0,
-  "maximum": 100,
-  "exclusiveMaximum": true
+      
+       "oneOf": [
+                { "$ref": "#/definitions/volumeNumbers" },
+                { "$ref": "#/definitions/powerParameters" }
+            ]
     }
   },
   "required": [
     "command",
     "parameter"
-  ]
+  ],
+  
+     "definitions": {
+        "volumeNumbers": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 100,
+          "exclusiveMaximum": true
+        },
+        "powerParameters": {
+          "type": "string",
+          "enum": ["on", "off"]
+        }
+    }
 }
+
+ 
