@@ -39,4 +39,8 @@ jspm_packages
 .node_repl_history
 
 # IDE specific files
+<<<<<<< HEAD
 .vscode
+=======
+.vscode
+>>>>>>> onoff

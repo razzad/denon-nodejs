@@ -21,8 +21,13 @@ if (command == 'volume') {
 
      denonClient.setVolume(parameter); 
      denonClient.disconnect();
-}
+};
+if (command == 'power') {
 
+    if(parameter=="on")denonClient.setPower("ON"); 
+     if(parameter=="off")denonClient.setPower("STANDBY"); 
+     denonClient.disconnect();
+};
 
   })
   .catch((error) => {
